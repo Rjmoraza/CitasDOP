@@ -1,0 +1,11 @@
+INSERT INTO Horario(horario) VALUES ("08:00");
+INSERT INTO Horario(horario) VALUES ("09:00");
+INSERT INTO Horario(horario) VALUES ("10:00");
+INSERT INTO Horario(horario) VALUES ("11:00");
+INSERT INTO Horario(horario) VALUES ("13:00");
+INSERT INTO Horario(horario) VALUES ("14:00");
+INSERT INTO Horario(horario) VALUES ("15:00");
+INSERT INTO Horario(horario) VALUES ("16:00");
+INSERT INTO Horario(horario) VALUES ("17:00");
+INSERT INTO Horario(horario) VALUES ("18:00");
+INSERT INTO Horario(horario) VALUES ("19:00");

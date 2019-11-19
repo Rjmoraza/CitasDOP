@@ -1,0 +1,10 @@
+INSERT INTO Motivo (motivo) VALUES ("Académico");
+INSERT INTO Motivo (motivo) VALUES ("Ajuste a la vida universitaria");
+INSERT INTO Motivo (motivo) VALUES ("Proyecto de vida");
+INSERT INTO Motivo (motivo) VALUES ("Pareja");
+INSERT INTO Motivo (motivo) VALUES ("Sexualidad");
+INSERT INTO Motivo (motivo) VALUES ("Manejo del estrés");
+INSERT INTO Motivo (motivo) VALUES ("Vocacional-Profesional");
+INSERT INTO Motivo (motivo) VALUES ("Autoestima");
+INSERT INTO Motivo (motivo) VALUES ("Familiar");
+INSERT INTO Motivo (motivo) VALUES ("Referencia");
