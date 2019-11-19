@@ -40,6 +40,9 @@
                   else if(this.responseText == "Psicologa"){
                     location.href = "php/editarCatalogos.php";
                   }
+									else if(this.responseText == "Admin"){
+										location.href = "php/agregarPsicologa.php";
+									}
                   else{
                     alert("Usuario o contraseña incorrectos");
                   }
@@ -122,9 +125,9 @@
                   <a href="#signup" class="to_register"> Crear cuenta </a>
                 </p>
                 <br>
-                
+
                   <a onclick = 'location.href = "php/recuperarContrasena.php"' class="to_register"> Recuperar Contraseña </a>
-        
+
                 <div class="clearfix"></div>
                 <br />
 
@@ -179,9 +182,9 @@
                    }
                    echo "</select><br>";
                 ?>
-              </div>    
+              </div>
               <div>
-                Sexo:       
+                Sexo:
                 <?php
                   $sql = "SELECT * FROM `Sexo`";
                   $result = mysqli_query($conn, $sql);
@@ -233,11 +236,11 @@
 
     <script>
     $('#myDatepicker').datetimepicker();
-    
+
     $('#myDatepicker2').datetimepicker({
         format: 'DD/MM/YYYY'
     });
-    
+
     $('#myDatepicker3').datetimepicker({
         format: 'hh:mm A'
     });

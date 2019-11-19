@@ -14,7 +14,7 @@
    <!-- <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <!-- Bootstrap CSS -->
    <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
    <!-- <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
 
@@ -151,7 +151,7 @@
           xmlhttp.open("GET", "eliminarMotivo.php?idMotivo=" + motivoText, true);
           xmlhttp.send();
       }
-    }  
+    }
     function registrarReferencia(){
       var referenciaTextIn = document.getElementById("referenciaTextIn").value;
       if(referenciaTextIn == ""){
@@ -213,11 +213,14 @@
               <div class="profile_info">
                 <h2>Bienvenida: </h2>
                 <?php
-                  $sql = "SELECT * from Persona where idPersona = '".$_SESSION["usuarioActivo"]."'";
-                  $result = mysqli_query($conn, $sql);
-                  while($row = mysqli_fetch_assoc($result)) {
-                      echo "<h2>".$row["nombre"]." ".$row["primerApellido"]." ".$row["segundoApellido"]."</h2>";
-                  }
+									if($_SESSION["usuarioActivo"] !== "-1")
+									{
+										$sql = "SELECT * from Persona where idPersona = '".$_SESSION["usuarioActivo"]."'";
+										$result = mysqli_query($conn, $sql);
+										while($row = mysqli_fetch_assoc($result)) {
+												echo "<h2>".$row["nombre"]." ".$row["primerApellido"]." ".$row["segundoApellido"]."</h2>";
+										}
+									}
                 ?>
               </div>
             </div>
@@ -242,7 +245,7 @@
                 </table>
 
                 </ul>
-              </div> 
+              </div>
             </div>
             <div class="title-2" style="border: 0;">
                 <h2>Departamento de Orientación y Psicología</h2>
@@ -278,7 +281,7 @@
                         <li><a href="#Referencia" data-toggle="tab">Referencia</a>
                         </li>
                       </ul>
-             
+
 
                       <!-- Tab panes -->
                       <div class="tab-content">
@@ -312,10 +315,10 @@
                           </div>
                           <br><br>
                           <input class = 'btn btn-success' type='button' value='Registrar' onclick = 'registrarCarrera()'>
-                          <input class = 'btn btn-success' type='button' value='Eliminar' onclick = 'eliminarCarrera()'> 
-                            
+                          <input class = 'btn btn-success' type='button' value='Eliminar' onclick = 'eliminarCarrera()'>
+
                         </div>
-                        <div class="tab-pane" id="Motivo"> 
+                        <div class="tab-pane" id="Motivo">
                         <div class="form-group">
                           <br><br>
                           <label class="col-md-6 col-sm-12 col-xs-12 control-label">Motivos de consulta actuales:</label>
@@ -341,7 +344,7 @@
                           </div>
                           <br><br><br>
                           <input class = 'btn btn-success' type='button' value='Registrar' onclick = 'registrarMotivo()'>
-                          <input class = 'btn btn-success' type='button' value='Eliminar' onclick = 'eliminarMotivo()'> 
+                          <input class = 'btn btn-success' type='button' value='Eliminar' onclick = 'eliminarMotivo()'>
                         </div>
 
                         </div>
@@ -372,13 +375,13 @@
 
                           </div>
 
-                          
+
                           <br><br><br>
                           <input class = 'btn btn-success' type='button' value='Registrar' onclick = 'registrarReferencia()'>
                           <input class = 'btn btn-success' type='button' value='Eliminar' onclick = 'eliminarReferencia()'>
-                          </div>  
+                          </div>
                         </div>
-                      </div>                 
+                      </div>
                     <div class="clearfix"></div>
                   </div>
                 </div>
