@@ -9,23 +9,10 @@ $psicologa = $_POST['psicologa'];
 $dia = $_POST['dia'];
 $hora = $_POST['hora'];
 
-
-$estudiante = 'rasevedo9@gmail.com';
-$psicologa = 'soy psicólogo';
-$dia = '24-06-2019';
-$hora = "12pm";
-
-
 $mail = new PHPMailer;
 
-//$sql = "SELECT correo FROM Persona WHERE idPersona = 11";
-//$result = mysqli_query($conn, $sql); 
-//  while($row = mysqli_fetch_assoc($result)) {
-//      $remitente = $row["correo"];
-//  }
 $mail->isHTML(true);
 $mail->setFrom('citadoptecj@gmail.com', 'citaDOP');
-//$mail->addAddress('rasevedo9@gmail.com');
 $mail->addAddress($estudiante);
 $mail->addAddress($psicologa);
 $mail->Subject = 'Asignación de cita asesoría psicoeducativa';

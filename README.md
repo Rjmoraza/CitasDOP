@@ -15,5 +15,5 @@ La aplicación fue diseñada para una arquitectura LAMP o WAMP, por lo que neces
 
 #### Base de datos
 
-La construcción de la base de datos 
+Crear una base de datos con usuario dedicado en mySQL y correr el esquema citaDOPTablas.sql, cambiar los datos de autenticación en el archivo /php/database.php
 
